@@ -11,6 +11,6 @@ RUN apt-get -y install nginx
 
 COPY ./common/db.root /etc/bind/db.root
 COPY ./common/run_services.sh run_services.sh
-COPY ./authoritive_internic/etc/bind/db.internic /etc/bind/db.internic
-COPY ./authoritive_internic/etc/bind/named.conf.local /etc/bind/named.conf.local
+COPY ./authoritive_nynex.internic/etc/bind/db.nynex.internic /etc/bind/db.nynex.internic
+COPY ./authoritive_nynex.internic/etc/bind/named.conf.local /etc/bind/named.conf.local
 CMD ./run_services.sh

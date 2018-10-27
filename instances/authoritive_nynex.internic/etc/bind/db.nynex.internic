@@ -1,0 +1,31 @@
+;
+; BIND data file for internic
+;; $TTL	300
+$TTL	3600
+
+@		IN	SOA	cadimus.nynex.internic. hostmaster.cadimus.nynex.internic. (
+                        2018102901  ; serial - must be incremented by hand each time a change is made
+                        4H          ; refresh - secondary servers should wait this long between zone transfers
+                        15M         ; retry - on zone transfer failure, secondary waits this long before retry
+                        1D          ; expire - if secondary cannot reach primary use the old info this long
+                        1H          ; default_ttl min - Negative cache TTL, TTL of zone RRsets 30M - 5D
+                         )
+;;
+    NS ns1.nynex.internic
+
+$ORIGIN nynex.internic.
+
+ns1     IN  A        172.16.0.102
+ns1     IN  AAAA	fd36:7b4:c298:bce5::1002
+
+cadimus IN	A	    172.16.0.100
+cadimus IN	AAAA	fd36:7b4:c298:bce5::1000
+
+aethena IN	A	    172.16.0.101
+aethena IN	AAAA	fd36:7b4:c298:bce5::1001
+
+olypmus IN  A        172.16.0.102
+olypmus IN	AAAA	fd36:7b4:c298:bce5::1002
+
+hermes IN  A        172.16.0.103
+hermes IN	AAAA	fd36:7b4:c298:bce5::1003

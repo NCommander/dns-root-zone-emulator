@@ -1,0 +1,8 @@
+# Declare our list of machines
+declare -a MACHNE_LIST arr=(
+    "root_zone"
+    "authoritive_internic"
+    "authoritive_nynex.internic"
+    "recursive_nynex.internic"
+    "client_nynex"
+)

@@ -12,7 +12,7 @@ $TTL	3600
                          )
 ;;
 
-internic.       IN NS nynex.internic.
+nynex.       IN NS ns1.nynex.internic.
 
-nynex.internic.	IN	A	172.16.0.101
-nynex.internic.	IN	AAAA	fd36:7b4:c298:bce5::1001
+ns1.nynex.internic.     IN  A        172.16.0.102
+ns1.nynex.internic.     IN  AAAA	fd36:7b4:c298:bce5::1002
