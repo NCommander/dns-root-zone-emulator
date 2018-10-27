@@ -1,0 +1,3 @@
+.                        3600000      NS    ROOT-SERVER.INTERNIC
+ROOT-SERVER.INTERNIC.      3600000      A     176.16.0.100
+ROOT-SERVER.INTERNIC.      3600000      AAAA  fd36:7b4:c298:bce5::1000

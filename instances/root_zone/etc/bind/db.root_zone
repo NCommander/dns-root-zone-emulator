@@ -4,7 +4,7 @@
 $TTL	3600
 
 @		IN	SOA	root-zone.internic. hostmaster.root-zone.internic. (
-                        2018102801  ; serial - must be incremented by hand each time a change is made
+                        2018102804  ; serial - must be incremented by hand each time a change is made
                         4H          ; refresh - secondary servers should wait this long between zone transfers
                         15M         ; retry - on zone transfer failure, secondary waits this long before retry
                         1D          ; expire - if secondary cannot reach primary use the old info this long
@@ -12,12 +12,12 @@ $TTL	3600
                          )
 ;;
 
-@	IN NS root-zone.internic.
+.		IN NS root-zone.internic.
+internic.       IN NS nynex.internic.
 
 ; Glue records to point to ourselves
 root-zone.internic.	IN	A	172.16.0.100
 root-zone.internic.	IN	AAAA	fd36:7b4:c298:bce5::1000
 
-hostmaster.root-zone.internic.	IN	A	172.16.0.100
-hostmaster.root-zone.internic.	IN	AAAA	fd36:7b4:c298:bce5::1000
-
+nynex.internic.	IN	A	172.16.0.101
+nynex.internic.	IN	AAAA	fd36:7b4:c298:bce5::1001

@@ -6,8 +6,8 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "." {
+zone "internic" {
         type master;
-        file "/etc/bind/db.root_zone";
+        file "/etc/bind/db.internic";
 	notify yes;
 };

@@ -8,9 +8,8 @@ RUN apt-get -y dist-upgrade
 RUN apt-get -y install bind9
 RUN apt-get -y install nginx
 
-COPY ./root_zone/etc/bind/db.root_zone /etc/bind/db.root_zone
-COPY ./root_zone/etc/bind/named.conf.local /etc/bind/named.conf.local
-COPY ./root_zone/etc/bind/named.conf.options /etc/bind/named.conf.options
-COPY ./root_zone/etc/bind/named.conf.default-zones /etc/bind/named.conf.default-zones
+COPY ./common/db.root /etc/bind/db.root
 COPY ./common/run_services.sh run_services.sh
+COPY ./authoritive_internic/etc/bind/db.internic /etc/bind/db.internic
+COPY ./authoritive_internic/etc/bind/named.conf.local /etc/bind/named.conf.local
 CMD ./run_services.sh

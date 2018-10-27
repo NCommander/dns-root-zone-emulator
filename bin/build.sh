@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Handles creation of docker networks and zones
+#DISABLE_CACHE="--no-cache"
 
 echo "Deleting IDN network if it already exists"
 docker network rm idn_net
@@ -20,10 +21,16 @@ fi
 
 # Switch directories and start building zones
 mkdir -p build
-docker build -t root_zone -f instances/root_zone/Dockerfile instances/root_zone
+docker build $DISABLE_CACHE -t root_zone -f instances/root_zone/Dockerfile instances
 
 if [ $? -ne 0 ]; then
     echo "FATAL: Failed to build the root zone";
     exit 1;
 fi
 
+docker build $DISABLE_CACHE -t authoritive_internic -f instances/authoritive_internic/Dockerfile instances
+
+if [ $? -ne 0 ]; then
+    echo "FATAL: Failed to build the internic authoritive zone";
+    exit 1;
+fi
