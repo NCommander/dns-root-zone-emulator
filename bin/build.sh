@@ -19,9 +19,9 @@ if [ $? -ne 0 ]; then
 fi
 
 # Switch directories and start building zones
-mkdir -p instances/root_zone
+mkdir -p build
+docker build -t root_zone -f instances/root_zone/Dockerfile instances/root_zone
 
-docker build -t root_zone -f root_zone/Dockerfile root_zone
 if [ $? -ne 0 ]; then
     echo "FATAL: Failed to build the root zone";
     exit 1;
