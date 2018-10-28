@@ -11,8 +11,11 @@ $TTL	3600
                         1H          ; default_ttl min - Negative cache TTL, TTL of zone RRsets 30M - 5D
                          )
 ;;
+internic.      IN NS ns1.internic.
+nynex.internic. IN NS ns1.nynex.internic.
 
-nynex.       IN NS ns1.nynex.internic.
+ns1.internic.     IN  A        172.16.0.101
+ns1.internic.     IN  AAAA	fd36:7b4:c298:bce5::1001
 
 ns1.nynex.internic.     IN  A        172.16.0.102
-ns1.nynex.internic.     IN  AAAA	fd36:7b4:c298:bce5::1002
+ns1.nynex.internic.     IN  AAAA        fd36:7b4:c298:bce5::1002

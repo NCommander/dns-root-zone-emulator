@@ -11,7 +11,7 @@ $TTL	3600
                         1H          ; default_ttl min - Negative cache TTL, TTL of zone RRsets 30M - 5D
                          )
 ;;
-    NS ns1.nynex.internic
+    NS ns1.nynex.internic.
 
 $ORIGIN nynex.internic.
 
