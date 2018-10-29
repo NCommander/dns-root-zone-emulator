@@ -10,7 +10,9 @@ RUN apt-get -y install bind9
 RUN apt-get -y install nginx
 
 COPY ./common/db.root /etc/bind/db.root
+COPY ./common/bind.keys /etc/bind/bind.keys
 COPY ./common/run_services.sh run_services.sh
+
 COPY ./recursive_nynex.internic/etc/bind/named.conf.options /etc/bind/named.conf.options
 
 CMD ./run_services.sh

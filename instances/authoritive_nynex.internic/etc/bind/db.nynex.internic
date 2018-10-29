@@ -12,6 +12,8 @@ $TTL	3600
                          )
 ;;
     NS ns1.nynex.internic.
+    
+nynex.internic. IN DNSKEY 257 3 8 AwEAAaAINn/OwDuRkKqcmBON88w//O2J+u7Qx08N8+xBU8fRBwvWOiJ4 pGmwroyD4hzu22j1CyMzHGLFmquuH/cRBYMheQrdmj1QhyzffOnwfNIK blVlrWTBl3nr73MMkcMyU2plCQw7vEXddvSszg5O+hwHE1INjuot56JE pn047M3l6nR9a3BQg/9QxbegE+S5JcQ5dx44bCJ4k5y73VzGuYgObK3O tUhillWfiIXnoC5u6ngElcnGFUZ/hWxRbaVmPu+Lu6W15WCPEW9uugwz ik7djUnUYEOE9UWBdSaBJvU1V4zspbO+PRlk+5f2LGG0CZ5rsMqpIGTP vQlPGEDd/l8=
 
 $ORIGIN nynex.internic.
 

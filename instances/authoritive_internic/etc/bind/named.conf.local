@@ -10,4 +10,6 @@ zone "internic" {
         type master;
         file "/etc/bind/db.internic";
 	notify yes;
+        auto-dnssec maintain;
+        inline-signing yes;
 };

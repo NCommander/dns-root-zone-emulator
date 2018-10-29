@@ -10,4 +10,6 @@ zone "." {
         type master;
         file "/etc/bind/db.root_zone";
 	notify yes;
+        auto-dnssec maintain;
+        inline-signing yes;
 };
