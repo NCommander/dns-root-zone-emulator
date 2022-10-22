@@ -8,6 +8,7 @@ RUN apt-get -y dist-upgrade
 RUN apt-get -y install nano
 RUN apt-get -y install bind9
 RUN apt-get -y install nginx
+RUN apt-get -y install bind9-dnsutils
 
 COPY ./common/db.root /etc/bind/db.root
 COPY ./common/bind.keys /etc/bind/bind.keys
