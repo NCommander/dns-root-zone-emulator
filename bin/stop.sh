@@ -5,3 +5,4 @@ docker stop authoritive_internic
 docker stop authoritive_nynex.internic
 docker stop recursive_nynex.internic
 docker stop client_nynex
+docker stop reverse_zone
