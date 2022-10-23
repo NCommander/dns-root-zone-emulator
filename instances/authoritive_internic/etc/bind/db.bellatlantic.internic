@@ -14,3 +14,10 @@ $TTL	3600
     NS ns1.bellatlantic.internic.
 
 bellatlantic.internic. IN DNSKEY 257 3 8 AwEAAcyM7QlCTnyHTlUUsObgAJMwGlznos8ZQB9BrxpfoxzzhlNRWl5/ NhnQluofSS5IZUqew5Gx6D1Pqv9qaX6sBVuthqcpz1af54FzzwZpAHtr 9qo+iD+NT4MY5ByaPJ+PzsrvUCfwmfBRl5j8ElXdTU2rpjunuke7WU/n +9o9CTPT0/Ig8/RCW2nTiDhfNeehCLg4SQRbzPaKhecgLNMfsID5XwhS bz7GF3q6waqWjSmFo2wIOOs+7FXbaM1djoS0xMhVgZDJusstaR7RySyW kw8HB4UYjjZAbclN5b1tJuH2Oyldw0fFhSm9wS4BhJC27OeaANuNvL3A OnF4/1OhkFE=
+bellatlantic.internic. IN DNSKEY 257 3 8 AwEAAcyM7QlCTnyHTlUUsObgAJMwGlznos8ZQB9BrxpfoxzzhlNRWl5/ NhnQluofSS5IZUqew5Gx6D1Pqv9qaX6sBVuthqcpz1af54FzzwZpAHtr 9qo+iD+NT4MY5ByaPJ+PzsrvUCfwmfBRl5j8ElXdTU2rpjunuke7WU/n +9o9CTPT0/Ig8/RCW2nTiDhfNeehCLg4SQRbzPaKhecgLNMfsID5XwhS bz7GF3q6waqWjSmFo2wIOOs+7FXbaM1djoS0xMhVgZDJusstaR7RySyW kw8HB4UYjjZAbclN5b1tJuH2Oyldw0fFhSm9wS4BhJC27OeaANuNvL3A OnF4/1OhkFE=
+
+bellatlantic.internic. IN  A        172.16.0.102
+bellatlantic.internic. IN  AAAA        fd36:7b4:c298:bce5::1002
+
+ns1.bellatlantic.internic.     IN  A        172.16.0.102
+ns1.bellatlantic.internic.     IN  AAAA        fd36:7b4:c298:bce5::1002
