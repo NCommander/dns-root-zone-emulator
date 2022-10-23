@@ -46,14 +46,14 @@ docker run -d --net idn_net \
               --hostname hermes.nynex.internic \
               --init $DELETE_OPTION recursive_nynex.internic
 
-# nynex.internic recursive resolver
+# reverse zone
 docker run -d --net idn_net \
-              --name recursive_nynex.internic \
-              --ip 172.16.0.103 \
-              --ip6 fd36:07b4:c298:bce5::1003 \
+              --name reverse_zone \
+              --ip 172.16.0.104 \
+              --ip6 fd36:07b4:c298:bce5::1004 \
               --dns 127.0.0.1 \
               --hostname hermes.nynex.internic \
-              --init $DELETE_OPTION recursive_nynex.internic
+              --init $DELETE_OPTION reverse_zone
 
 # nynex.internic recursive resolver
  docker run -d --net idn_net \

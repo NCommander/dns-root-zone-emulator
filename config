@@ -5,4 +5,5 @@ declare -a MACHNE_LIST arr=(
     "authoritive_nynex.internic"
     "recursive_nynex.internic"
     "client_nynex"
+    "reverse_zone"
 )
