@@ -26,4 +26,5 @@ options {
     allow-recursion { any; };
 	allow-query-cache { any; };
 	recursion yes;
+	empty-zones-enable no;
 };
