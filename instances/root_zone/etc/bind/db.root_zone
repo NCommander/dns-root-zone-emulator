@@ -15,9 +15,11 @@ $TTL	3600
 .		IN NS root-zone.internic.
 .       IN DNSKEY 257 3 8 AwEAAb7KC/7eB4VTsoqF9BG4+L2qrW84H/gxt6So2/5JFHxPw3ovKWyU Ii883FrHLbI48njOVeHh/6hA9utLTSYQPVnjevrDCaF1/ZgcoAw2CXYY sOXQVq/0G+Wdqi8ZcR/HyrPjqBuWB5mfEAm/qO1qFwXygS9JDi7ppgAN vA7qnaYAtT1IFkDpS7TsyATRmsytM8KIelUqTTEiom3DKyTYpft6NOnG JBfmMaPw03fDtSbXAvO5wOmryjBHHgBdPLJhQaWfhkas8ACyebEnJJrr ib9INx3sX4jhPuuNMmo44OHcSB+rsb09DBssOlYKAYOocQjzSRjV5nlv yNQ3hPCtGTs=
 
-
 internic.       IN NS nynex.internic.
 internic.		IN DS 52615 8 2 B2EE5E977B544C70FE3610FBB3BD2D2B36CE2D68F5E63F8310DA85C3BB5D611A
+
+arpa.           IN NS ns1.arpa.
+arpa.           IN DS 4308 8 2 106BFCBC48A2FF96568EFF52EA30A328AF52A8D6A669A04C8B6166E78B24E3FF
 
 ; Glue records to point to ourselves
 root-zone.internic.	IN	A	172.16.0.100
@@ -25,3 +27,6 @@ root-zone.internic.	IN	AAAA	fd36:7b4:c298:bce5::1000
 
 nynex.internic.	IN	A	172.16.0.101
 nynex.internic.	IN	AAAA	fd36:7b4:c298:bce5::1001
+
+ns1.arpa. IN	A	172.16.0.104
+ns1.arpa.	IN	AAAA	fd36:7b4:c298:bce5::1004
