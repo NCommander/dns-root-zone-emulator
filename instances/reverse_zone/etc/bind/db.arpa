@@ -17,4 +17,22 @@ arpa.       IN DNSKEY 257 3 8 AwEAAbN9JeIf7S9R5A4Arr06wxdxLN1vzFnC4Afi2BfQ4roDHG
 ns1.arpa.     IN  A        172.16.0.104
 ns1.arpa.     IN  AAAA	fd36:7b4:c298:bce5::1004
 
+; Reverse records!
+100.0.16.172.in-addr.arpa IN PTR cadimus.nynex.internic
+0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa IN PTR cadimus.nynex.internic
+
+101.0.16.172.in-addr.arpa IN PTR aethena.nynex.internic
+1.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa IN PTR aethena.nynex.internic
+
+102.0.16.172.in-addr.arpa IN PTR olypmus.nynex.internic
+2.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa IN PTR olypmus.nynex.internic
+
+103.0.16.172.in-addr.arpa IN PTR hermes.nynex.internic
+3.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa IN PTR hermes.nynex.internic
+
+104.0.16.172.in-addr.arpa IN PTR sierra.nynex.internic
+4.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa IN PTR sierra.nynex.internic
+
+
+
 test.arpa.    IN TXT test

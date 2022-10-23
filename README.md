@@ -90,3 +90,4 @@ Validating internic requires getting a chain of trust from the root zone downwar
 `delv -a ./emulator.key @172.16.0.103 internic DNSKEY +vtrace`
 
 The DNSKEY record exists in the TLD which is its own signing key. This can be validated from the root trust anchor, and the DS record in the root.
+
