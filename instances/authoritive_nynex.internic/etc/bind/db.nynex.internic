@@ -31,3 +31,6 @@ olypmus IN	AAAA	fd36:7b4:c298:bce5::1002
 
 hermes IN  A        172.16.0.103
 hermes IN	AAAA	fd36:7b4:c298:bce5::1003
+
+sierra IN A         172.16.0.104
+sierra IN AAAA      fd36:7b4:c298:bce5::1004

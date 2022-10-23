@@ -87,7 +87,6 @@ nynex.internic.	IN	AAAA	fd36:7b4:c298:bce5::1001
 
 Validating internic requires getting a chain of trust from the root zone downward, as seen with delv.
 
-NOTE: A different record beside nynex.internic must be used since the glue record is signed with the root KSK
+`delv -a ./emulator.key @172.16.0.103 internic DNSKEY +vtrace`
 
-
-
+The DNSKEY record exists in the TLD which is its own signing key. This can be validated from the root trust anchor, and the DS record in the root.

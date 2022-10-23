@@ -47,6 +47,15 @@ docker run -d --net idn_net \
               --init $DELETE_OPTION recursive_nynex.internic
 
 # nynex.internic recursive resolver
+docker run -d --net idn_net \
+              --name recursive_nynex.internic \
+              --ip 172.16.0.103 \
+              --ip6 fd36:07b4:c298:bce5::1003 \
+              --dns 127.0.0.1 \
+              --hostname hermes.nynex.internic \
+              --init $DELETE_OPTION recursive_nynex.internic
+
+# nynex.internic recursive resolver
  docker run -d --net idn_net \
               --name client_nynex \
               --ip 172.16.0.200 \

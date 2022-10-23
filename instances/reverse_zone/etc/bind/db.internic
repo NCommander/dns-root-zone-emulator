@@ -1,0 +1,20 @@
+;
+; BIND data file for internic
+;; $TTL	300
+$TTL	3600
+
+@		IN	SOA	arpa.internic. hostmaster.arpa.internic. (
+                        2018102803  ; serial - must be incremented by hand each time a change is made
+                        4H          ; refresh - secondary servers should wait this long between zone transfers
+                        15M         ; retry - on zone transfer failure, secondary waits this long before retry
+                        1D          ; expire - if secondary cannot reach primary use the old info this long
+                        1H          ; default_ttl min - Negative cache TTL, TTL of zone RRsets 30M - 5D
+                         )
+;;
+arpa.       IN NS ns1.arpa.
+arpa.       IN DNSKEY 257 3 8 AwEAAbN9JeIf7S9R5A4Arr06wxdxLN1vzFnC4Afi2BfQ4roDHGGDtE/X ZEMJmHXWyTmKvXI55poMoZlF7R4ATjHdJUmtsPnicxlbGoIR3Xt7rtYw S6jwP/E9W37c4rQj6B3yb7KdFu22WDLnq0jyrV6jHcbZ7w/Mf1jdDJo2 K/HB/FUdbWE2jAdMEdY8fCMFwFl0E6BfIZzocw5rX5RtyEZ9pg8lo4Ze 7NqD6baechRsB1wjGtgQ1dmAAo0uETFtkVUevQjpTBTOvC23ubyjitPw yZKRfGq+7aLVq0yi7hcGVaojVxYrxYTztIxYxCIXzRKwNvNnHOYkmvAM v7qVIQh5YsE=
+
+ns1.arpa.     IN  A        172.16.0.104
+ns1.arpa.     IN  AAAA	fd36:7b4:c298:bce5::1004
+
+test.arpa.    IN TXT test
