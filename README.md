@@ -91,3 +91,40 @@ Validating internic requires getting a chain of trust from the root zone downwar
 
 The DNSKEY record exists in the TLD which is its own signing key. This can be validated from the root trust anchor, and the DS record in the root.
 
+## Reverse record lookup
+
+The emulator provides a full reverse zone, including signatures, in both IPv4 and IPv6
+
+ARPA zone test record:
+`delv -a ./emulator.key @172.16.0.103 test.arpa TXT`
+
+Reverse lookup: Olypmus
+`host fd36:7b4:c298:bce5::1002 fd36:7b4:c298:bce5::1003`
+`delv -a ./emulator.key @fd36:7b4:c298:bce5::1003 2.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa PTR`
+
+
+```
+mcasadevall@beacon:~$ host fd36:7b4:c298:bce5::1002 fd36:7b4:c298:bce5::1003
+Using domain server:
+Name: fd36:7b4:c298:bce5::1003
+Address: fd36:7b4:c298:bce5::1003#53
+Aliases: 
+
+2.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa domain name pointer olypmus.nynex.internic.
+mcasadevall@beacon:~$ delv -a ./emulator.key @fd36:7b4:c298:bce5::1003 2.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa PTR
+;; ./emulator.key:23: option 'managed-keys' is deprecated
+; fully validated
+2.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa. 3566 IN PTR olypmus.nynex.internic.
+2.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.5.e.c.b.8.9.2.c.4.b.7.0.6.3.d.f.ip6.arpa. 3566 IN RRSIG	PTR 8 34 3600 20221121083254 20221023193407 4308 arpa. ZSwxnXKr2/SO6v9w4YSFIkDFsSzSi4VkiLssYqaimixsF7At49z6D9XS ZJeM2xiCK41MFww7VvQYuOuVpYiYbR84Vn2jQmJrd02iMSekz6MLMj1j 7gpWYk+8cEE/eUKLatXLlPRjd7G4Ns71Ezoz1FiBWEJZXF23OaDB/j/+ kKXt7Yp9J0aATTMBWU/F6RTJOXerPTpmu5G9+TdmySJ2+v1Bu0Uz7b0h VoLM/PcjaATf0J5dtNKhscHhX7MCRcGgZ/IHetbcSdJ0SiSgNo8A/WYF e1fRyDdao68RjThDNHA+NfavdMiPRXwoLrbQMozQShQATbxg74br+nBd Wl2uNw==
+```
+
+## Endpoint signed records
+All machines have host records under *.nynex.internic
+
+`delv -a ./emulator.key @fd36:7b4:c298:bce5::1003 cadimus.nynex.internic`
+
+```
+; fully validated
+cadimus.nynex.internic.	3600	IN	A	172.16.0.100
+cadimus.nynex.internic.	3600	IN	RRSIG	A 8 3 3600 20221110225050 20221023193405 13854 nynex.internic. Kqess+6eTx2+DMSypsyinIasovxd5cTMFmfmvThjJNzWdoi1sfjAftV6 C8R5/YySmP8NDo7zH6UO2MUThs4WEWzqTVER8RM1MvVldcU5RqnSbd9M xMeUqsNbZhsQrQsRaRDwssESbB81abtINF6k6WiKBscC454xZsC0PiMp yXtMbsqaY7aqzlu3JAhERsz7xyhjR7wZtJKB7JHUSlSn3mShWiMSBy5i DWWviTIVQCOva1HazujW1QM0wJi5Umgl2BXUHJDuu3N6A8GN8HNuPtRX UTyhyJCQPf8lRebVAF0enR9tZnvSswagmXJnZ/j+xFbqwJlQ275JUZ0n YAapLQ==
+```
