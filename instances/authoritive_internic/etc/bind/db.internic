@@ -26,5 +26,5 @@ ns1.nynex.internic.     IN  AAAA        fd36:7b4:c298:bce5::1002
 bellatlantic.internic. IN NS ns1.bellatlantic.internic.
 bellatlantic.internic. IN DS 35585 8 2 B19911D0DF158245883AF45886E389FF19916F6C1F819D93F3E679CBB8C635FC
 
-ns1.bellatlantic.internic.     IN  A        172.16.0.104
+ns1.bellatlantic.internic.     IN  A        172.16.0.101
 ns1.bellatlantic.internic.     IN  AAAA        fd36:7b4:c298:bce5::1004

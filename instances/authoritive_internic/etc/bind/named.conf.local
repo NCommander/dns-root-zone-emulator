@@ -13,3 +13,11 @@ zone "internic" {
         auto-dnssec maintain;
         inline-signing yes;
 };
+
+zone "bellatlantic.internic" {
+        type master;
+        file "/etc/bind/db.bellatlantic.internic";
+	notify yes;
+        auto-dnssec maintain;
+        inline-signing yes;
+};
